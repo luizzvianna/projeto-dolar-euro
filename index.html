@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>DevClu - Convert Money</title>
+
+</head>
+
+<body>
+
+    <main>
+
+        <label>
+            <b>Converter De:</b>
+            <select>
+                <option>R$ Real Brasileiro</option>
+            </select>
+        </label>
+
+        <label>
+            <b>Converter Para:</b>
+            <select class="currency-select">
+                <option value="dolar"><b>US$ Dólar Americano</b></option>
+                <option value="euro"><b>€ EURO</b></option>
+            </select>
+        </label>
+
+        <label>
+           <b> Valor </b>
+            <input class="input-currency" placeholder="10.000,00">
+        </label>
+
+        <button class="convert-button">
+            CONVERTER
+        </button>
+
+        <section>
+
+            <div class="currency-box">
+                <img class="arrow-img" src="./assets/Brasil.png" alt="logo-moeda-convert">
+                <p class="currency"><b>Real</b></p>
+                <p class="currency-value-to-convert"><b>R$0, 00</b></p>
+            </div>
+
+            <img src="./assets/setinha.png" alt="seta">
+
+
+            <div class="currency-box">
+                <img class="currency-image" src="./assets/EUA.png" alt="moeda-convertida">
+                <p class="currency" id="currency-name"><b>Dólar Americano</b></p>
+                <p class="currency-value"><b>US$ 0,0</b></p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+</body>
+
+<script src="./scripts.js"></script>
+</html>
