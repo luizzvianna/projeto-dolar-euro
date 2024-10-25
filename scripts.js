@@ -11,6 +11,7 @@ function convertValues() {
 
     const dolarToday = 5.69
     const euroToday = 6.16
+    const bitToday = 7.40
 
     const convertedValue = inputCurrencyValue / dolarToday
 
@@ -27,6 +28,13 @@ function convertValues() {
             style: "currency",
             currency: "EUR"
         }).format(inputCurrencyValue / euroToday)
+    }
+
+    if (currencySelect.value == "libra"){
+        currencyValueToConvert.innerHTML = new Intl.NumberFormat("rn-GBP", {
+            style: "currency",
+            currency: "GBP"
+        }).format(inputCurrencyValue / bitToday)
     }
 
 
