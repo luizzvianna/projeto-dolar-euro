@@ -39,8 +39,7 @@ function convertValues() {
         }).format(inputCurrencyValue / euroToday)
     }
 
-    if (currencySelect.value === "libra"){
-        convertedValue = inputCurrencyValue / libraToday;
+    if (currencySelect.value == "libra"){
         currencyValueToConverted.innerHTML = new Intl.NumberFormat("en-GB", {
             style: "currency",
             currency: "GBP",
@@ -49,7 +48,6 @@ function convertValues() {
     }
 
 }
-
 
 
 function chanceCurrency (){
@@ -69,7 +67,7 @@ if (currencySelect.value == "euro") {
 
 if (currencySelect.value == "libra"){
     currencyName.innerHTML = "Libra"
-    currencyImage.src="./assets/moedalibriana.png"
+    currencyImage.src="./assets/download.png"
 }
 
 convertValues()
