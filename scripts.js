@@ -69,7 +69,7 @@ if (currencySelect.value == "euro") {
 
 if (currencySelect.value == "libra"){
     currencyName.innerHTML = "Libra"
-    currencyImage.src="./assets/LIBRA.png"
+    currencyImage.src="./assets/moedalibriana.png"
 }
 
 convertValues()
