@@ -6,14 +6,23 @@ function convertValues() {
     const inputCurrencyValue = document.querySelector(".input-currency").value
     const currencyValueToConvert = document.querySelector(".currency-value-to-convert")
     const currencyValueToConverted = document.querySelector(".currency-value")
-
+    
     console.log(currencySelect.value)
+    
+
+    
 
     const dolarToday = 5.69
     const euroToday = 6.16
-    const bitToday = 7.40
+    const libraToday = 8.70
 
     const convertedValue = inputCurrencyValue / dolarToday
+
+
+    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    }).format(inputCurrencyValue)
 
 
     if (currencySelect.value == "dolar") {
@@ -26,22 +35,18 @@ function convertValues() {
     if (currencySelect.value == "euro") {
         currencyValueToConverted.innerHTML = new Intl.NumberFormat("de-DE", {
             style: "currency",
-            currency: "EUR"
+            currency: "EUR",
         }).format(inputCurrencyValue / euroToday)
     }
 
-    if (currencySelect.value == "libra"){
-        currencyValueToConvert.innerHTML = new Intl.NumberFormat("rn-GBP", {
+    if (currencySelect.value === "libra"){
+        convertedValue = inputCurrencyValue / libraToday;
+        currencyValueToConverted.innerHTML = new Intl.NumberFormat("en-GB", {
             style: "currency",
-            currency: "GBP"
-        }).format(inputCurrencyValue / bitToday)
+            currency: "GBP",
+        }).format(inputCurrencyValue / libraToday);
+
     }
-
-
-    currencyValueToConvert.innerHTML = new Intl.NumberFormat("pt-BR", {
-        style: "currency",
-        currency: "BRL"
-    }).format(inputCurrencyValue)
 
 }
 
@@ -61,6 +66,13 @@ if (currencySelect.value == "euro") {
     currencyName.innerHTML =  "Euro" 
     currencyImage.src="./assets/EURO.png"
 }
+
+if (currencySelect.value == "libra"){
+    currencyName.innerHTML = "Libra"
+    currencyImage.src="./assets/LIBRA.png"
+}
+
+convertValues()
 
 }
 
